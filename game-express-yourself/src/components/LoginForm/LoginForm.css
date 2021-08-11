@@ -93,6 +93,10 @@ h2 {
 input {
   height: 3vh;
   font-family: cursive;
+  background: transparent;
+}
+input:hover {
+  background: rgba(255, 255, 255, 0.116);
 }
 
 #password {
@@ -108,6 +112,7 @@ input {
 
 #signup-form-link {
   font-family: cursive;
+  font-size: 16px;
   border-radius: 5rem;
   background: transparent;
 }
@@ -116,6 +121,7 @@ input {
 }
 
 #log-in {
+  font-size: 16px;
   width: 100px;
   font-family: cursive;
   border-radius: 5rem;
