@@ -10,7 +10,7 @@ html {
     #845ec2,
     #ec7753,
     #eb8fde,
-    #e5ec5f,
+    #b6ec5f,
     #ffffff34
   );
   background-image: var(--gradient);
@@ -39,8 +39,8 @@ h1 {
   background-attachment: fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-
-  font-size: 10vw;
+  font-family: cursive;
+  font-size: 8vw;
   font-weight: bold;
   text-align: center;
   margin-bottom: 0%;
@@ -59,15 +59,16 @@ h2 {
   background-attachment: fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-
-  font-size: 5vw;
+  font-family: cursive;
+  font-size: 4.5vw;
   font-weight: bold;
   text-align: center;
   margin-top: 0%;
 }
 
 .form-box {
-  margin-left: 40%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0%;
   width: fit-content;
   height: fit-content;
@@ -85,9 +86,41 @@ h2 {
   );
   backdrop-filter: blur(10px);
   z-index: 800;
-  font-size: 2vw;
+  font-size: 36px;
+  font-family: cursive;
 }
 
 input {
   height: 3vh;
+  font-family: cursive;
+}
+
+#password {
+  margin-left: 11px;
+}
+
+#buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+}
+
+#signup-form-link {
+  font-family: cursive;
+  border-radius: 5rem;
+  background: transparent;
+}
+#signup-form-link:hover {
+  background: rgba(255, 255, 255, 0.253);
+}
+
+#log-in {
+  width: 100px;
+  font-family: cursive;
+  border-radius: 5rem;
+  background: transparent;
+}
+#log-in:hover {
+  background: rgba(255, 255, 255, 0.253);
 }
