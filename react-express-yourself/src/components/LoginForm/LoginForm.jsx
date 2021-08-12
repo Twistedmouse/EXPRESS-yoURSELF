@@ -3,10 +3,10 @@ import "./LoginForm.css"
 
 export default function LoginForm() {
     return (
-        <div>
+        <div id="background">
             <article className="login-form">
-                <h1>EXPRESS yoURSELF</h1>
-                <h2>Sign in:</h2>
+                <h1 id="loginTitle">EXPRESS yoURSELF</h1>
+                <h2 id="signinH2">Sign in:</h2>
                 <div className="form-box">
                 <form >
                 <div>
@@ -18,7 +18,7 @@ export default function LoginForm() {
                     <input id="password" type="password" placeholder="Enter Password"></input>
                 </div>
             </form>
-            <div id="buttons">
+            <div className="buttons">
             <button id="signup-form-link" type="button">Make an Account</button> 
             <button id="log-in" type="button">Login</button>
             </div>
@@ -27,3 +27,4 @@ export default function LoginForm() {
         </div>
     )
 }
+
