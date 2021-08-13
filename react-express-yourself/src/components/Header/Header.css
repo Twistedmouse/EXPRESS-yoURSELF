@@ -10,7 +10,8 @@ html {
   justify-content: space-between;
   border-bottom: solid rgba(255, 255, 255, 0.116) 8px;
   border-style: outset;
-  border-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   padding: 25px;
   padding-top: 40px;
   background: linear-gradient(
@@ -25,13 +26,13 @@ html {
 #headerH1 {
   background: linear-gradient(
       to bottom,
-      #eee 12%,
-      rgba(251, 255, 1, 0.384) 15%,
-      #f278f7 30%
+      #eee 6%,
+      rgba(251, 255, 1, 0.384) 40%,
+      #f278f7 100%
     ),
     url(https://t3.ftcdn.net/jpg/02/95/65/94/360_F_295659437_PRGNuxt8UYvLDPOZPgl5DK7ZDxZn7REN.jpg);
 
-  background-attachment: fixed;
+  background-attachment: inherit;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-family: cursive;
@@ -41,10 +42,11 @@ html {
 }
 
 #profile {
+  margin-left: 20px;
   font-family: cursive;
   font-size: 2em;
   background: transparent;
-  border-radius: 5rem;
+  border-radius: 2rem;
   height: fit-content;
   padding: 15px;
   width: 150px;
@@ -54,10 +56,11 @@ html {
 }
 
 #headerLogin {
+  margin-right: 20px;
   font-family: cursive;
   font-size: 2em;
   background: transparent;
-  border-radius: 5rem;
+  border-radius: 2rem;
   height: fit-content;
   padding: 15px;
   width: 150px;

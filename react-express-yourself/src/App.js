@@ -1,6 +1,7 @@
 import "./App.css";
-import Header from "./components/Header/Header";
 import LoginForm from "./components/LoginForm/LoginForm";
+//import landing page body is component for landingPage moove after css is done
+import LandingPage from "./pages/LandingPage";
 import {
   ApolloClient,
   InMemoryCache,
@@ -40,12 +41,13 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Route exact path="/">
-          {/* <HomePage /> */}
+          <LandingPage />
+        </Route>
+        <Route exact path="/LoginForm">
+          <LoginForm />
         </Route>
 
-        <div className="App">
-          <LoginForm />
-        </div>
+        <div className="App"></div>
       </Router>
     </ApolloProvider>
   );
