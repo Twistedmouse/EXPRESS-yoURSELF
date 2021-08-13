@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import LoginForm from './LoginForm'
+import LoginForm from '../LoginForm/LoginForm'
 
 
 
