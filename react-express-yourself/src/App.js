@@ -43,6 +43,9 @@ function App() {
         <Route exact path="/">
           <LandingPage />
         </Route>
+        <Route exact path="/LoginForm">
+          <LoginForm />
+        </Route>
 
         <div className="App"></div>
       </Router>
