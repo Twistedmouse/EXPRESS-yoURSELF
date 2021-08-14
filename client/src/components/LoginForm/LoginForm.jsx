@@ -2,10 +2,13 @@ import "./LoginForm.css"
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
+import SignupForm from '../../components/SignupForm/SignupForm'
 
 import Auth from '../../utils/auth';
 
+
 const LoginForm = (props) => {
+    const [show, setShow] = useState(false)
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error, data }] = useMutation(LOGIN_USER);
   
@@ -59,17 +62,14 @@ const LoginForm = (props) => {
                           onChange={handleChange}></input>
                         </div>
                         <div className="buttons">
-                <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }} onClick={(e) =>{
-                e.preventDefault();
-                window.location.assign('/signUp')
-            }}>Make an Account</button> 
+                <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }} onClick={(e) => setShow(true)}>Make an Account</button> 
                 <button id="log-in" type="submit" style={{ cursor: 'pointer' }}>Login</button>
                 </div>
                       </form>
                 
                 )}{error && (<div>{error.message}</div>)}
                 </div>
-                
+              <SignupForm onClose={() => setShow(false)} show={show}/>  
                 
             </article>
         </div>

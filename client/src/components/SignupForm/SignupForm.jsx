@@ -5,9 +5,10 @@ import { ADD_USER } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 import './SignupForm.css'
-const SignupForm = () => {
+
+const SignupForm = (props) => {
   const [formState, setFormState] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
   });
@@ -39,75 +40,87 @@ const SignupForm = () => {
     }
   };
 
+  if(!props.show){
+      return null;
+  }
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-        <h1 id="signUpTitle">EXPRESS yoURSELF</h1>
-                <h2 id="signUpH2">Sign Up:</h2>
-          <div >
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                  <div className="form-box" >
-                      <div className="row">
-                            <label >Username: </label>
+    <main >
+      <div className="signUpModal">
+        <div className="modalContent">
+                <button id="closeModal" onClick={props.onClose}>❌</button>
+            <h1 id="signUpTitle">EXPRESS yoURSELF</h1>
+                    <h2 id="signUpH2">Sign Up:</h2>
+            <div >
+                {data ? (
+                <p>
+                    Success! You may now head{' '}
+                    <Link to="/">back to the homepage.</Link>
+                </p>
+                ) : (
+                <form onSubmit={handleFormSubmit}>
+                    <div className="form-box" >
+                        <div className="row">
+                                <label >Username: </label>
+                                        <input className="form-input"
+                                
+                                        placeholder="Enter username..."
+                                        name="username"
+                                        type="text"
+                                        value={formState.username}
+                                        onChange={handleChange}
+                                        />
+                        </div>
+                
+                        <div className="row">
+                                <label>Email: </label>
+                                        <input className="form-input" id="emailInput"
+                                        
+                                        placeholder="Enter email..."
+                                        name="email"
+                                        type="email"
+                                        value={formState.email}
+                                        onChange={handleChange}
+                                        />
+                        </div>
+
+                        <div className="row">
+                        <label>Password: </label>
                                     <input className="form-input"
-                            
-                                    placeholder="Enter username..."
-                                    name="name"
-                                    type="text"
-                                    value={formState.name}
+                                    
+                                    placeholder="Enter password..."
+                                    name="password"
+                                    type="password"
+                                    value={formState.password}
                                     onChange={handleChange}
                                     />
-                      </div>
-                        
-                        
-                        <label>Email: </label>
-                            <input className="form-input"
-                            
-                            placeholder="Enter email..."
-                            name="email"
-                            type="email"
-                            value={formState.email}
-                            onChange={handleChange}
-                            />
-                        <label>Password: </label>
-                            <input className="form-input"
-                            
-                            placeholder="Enter password..."
-                            name="password"
-                            type="password"
-                            value={formState.password}
-                            onChange={handleChange}
-                            />
-                                    <button
-                                    className="buttons"
-                                    style={{ cursor: 'pointer' }}
-                                    type="submit"
-                                    >
-                                    Submit
-                                    </button>
-                  </div>
-                
-              </form>
-            )}
+                        </div>
+                        <button
+                             id="submitBtn"
+                            style={{ cursor: 'pointer' }}
+                            type="submit"
+                            >
+                            Submit
+                        </button>
+                    </div>
+                    
+                </form>
+                )}
 
-            {error && (
-              <div >
-                {error.message}
-              </div>
-            )}
-          </div>
+                {error && (
+                <div >
+                    {error.message}
+                </div>
+                )}
+            </div>
         </div>
+        <div className="blurBackground"></div>
       </div>
+      
     </main>
+    
   );
+  
 };
 
 
