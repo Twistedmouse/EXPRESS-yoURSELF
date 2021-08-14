@@ -1,5 +1,7 @@
 html {
   /* background: rgb(129, 0, 129); */
+  height: 100%;
+  width: 100%;
   background: linear-gradient(
     180deg,
     rgb(56, 161, 161) 6%,

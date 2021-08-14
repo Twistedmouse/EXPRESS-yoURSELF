@@ -1,6 +1,6 @@
 import "./App.css";
 import LoginForm from "./components/LoginForm/LoginForm";
-//import landing page body is component for landingPage moove after css is done
+
 import LandingPage from "./pages/LandingPage";
 import {
   ApolloClient,
@@ -9,7 +9,12 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  // Redirect,
+} from "react-router-dom";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -42,9 +47,12 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
+            {/* {loggedIn ? <Redirect to="/dashboard" /> : <LandingPage />} */}
             <LandingPage />
           </Route>
-          <Route exact path="/signIn" component={LoginForm}></Route>
+          <Route path="/signIn">
+            <LoginForm />
+          </Route>
         </Switch>
 
         <div className="App"></div>
