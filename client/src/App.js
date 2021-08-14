@@ -1,6 +1,6 @@
 import "./App.css";
 import LoginForm from "./components/LoginForm/LoginForm";
-
+import React from "react";
 import LandingPage from "./pages/LandingPage";
 import {
   ApolloClient,

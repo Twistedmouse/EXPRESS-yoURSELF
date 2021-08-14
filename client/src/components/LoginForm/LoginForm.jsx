@@ -24,13 +24,13 @@ const LoginForm = (props) => {
       event.preventDefault();
       console.log(formState);
       try {
-        const { data } = await login({
+        const { data:{login:{token}} } = await login({
           variables: { ...formState },
         });
-  
-        Auth.login(data.login.token);
-      } catch (e) {
-        console.error(e);
+        console.log("token:",data)
+        Auth.login(token);
+      } catch (error) {
+        console.error(error);
       }
   
       // clear form values
@@ -45,24 +45,29 @@ const LoginForm = (props) => {
             <article className="login-form">
                 <h1 id="loginTitle">EXPRESS yoURSELF</h1>
                 <h2 id="signinH2">Sign in:</h2>
+                {data ? (<p>You're successfully signed in!</p>) : (
                 <div className="form-box">
-                <form onSubmit={handleFormSubmit}>
-                <div>
-                    <label>Username: </label>
-                    <input id="username" name="email" type="text" placeholder="Enter Username"  value={formState.email}
-                  onChange={handleChange}></input>
+                    <form onSubmit={handleFormSubmit}>
+                        <div>
+                            <label>Username: </label>
+                            <input id="username" name="email" type="text" placeholder="Enter Username"  value={formState.email}
+                          onChange={handleChange}></input>
+                        </div>
+                        <div>
+                            <label>Password: </label>
+                            <input id="password" name="password" type="password" placeholder="Enter Password" value={formState.password}
+                          onChange={handleChange}></input>
+                        </div>
+                        <div className="buttons">
+                <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }}>Make an Account</button> 
+                <button id="log-in" type="submit" style={{ cursor: 'pointer' }}>Login</button>
                 </div>
-                <div>
-                    <label>Password: </label>
-                    <input id="password" name="password" type="password" placeholder="Enter Password" value={formState.password}
-                  onChange={handleChange}></input>
+                      </form>
+                
                 </div>
-            </form>
-            <div className="buttons">
-            <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }}>Make an Account</button> 
-            <button id="log-in" type="button" style={{ cursor: 'pointer' }}>Login</button>
-            </div>
-                </div>
+                  )}{error && (<div>{error.message}</div>)}
+                
+                
             </article>
         </div>
     )
