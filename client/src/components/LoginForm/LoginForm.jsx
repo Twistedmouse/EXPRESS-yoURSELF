@@ -1,6 +1,5 @@
 import "./LoginForm.css"
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 
@@ -60,8 +59,8 @@ const LoginForm = (props) => {
                 </div>
             </form>
             <div className="buttons">
-            <button id="signup-form-link" type="button">Make an Account</button> 
-            <button id="log-in" type="button">Login</button>
+            <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }}>Make an Account</button> 
+            <button id="log-in" type="button" style={{ cursor: 'pointer' }}>Login</button>
             </div>
                 </div>
             </article>
