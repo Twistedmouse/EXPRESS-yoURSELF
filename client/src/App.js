@@ -1,7 +1,8 @@
 import "./App.css";
-import LoginForm from "./components/LoginForm/LoginForm";
 import React from "react";
 import LandingPage from "./pages/LandingPage";
+import LoginForm from "./components/LoginForm/LoginForm";
+import SignUpPage from "./pages/SignUpPage";
 import {
   ApolloClient,
   InMemoryCache,
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <Route path="/signIn">
             <LoginForm />
+          </Route>
+          <Route path="/signup">
+            <SignUpPage />
           </Route>
         </Switch>
 

@@ -1,0 +1,56 @@
+#signUpTitle {
+  background: linear-gradient(
+      to bottom,
+      #eee 12%,
+      rgba(251, 255, 1, 0.384) 20%,
+      #f278f7 50%
+    ),
+    url(https://t3.ftcdn.net/jpg/02/95/65/94/360_F_295659437_PRGNuxt8UYvLDPOZPgl5DK7ZDxZn7REN.jpg);
+
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: cursive;
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  margin: 0%;
+}
+
+#signUpH2 {
+  background: linear-gradient(
+      to bottom,
+      #eee 10%,
+      rgba(251, 255, 1, 0.384) 22%,
+      #f278f7 80%
+    ),
+    url(https://t3.ftcdn.net/jpg/02/95/65/94/360_F_295659437_PRGNuxt8UYvLDPOZPgl5DK7ZDxZn7REN.jpg);
+
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: cursive;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0%;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  height: 3vh;
+  font-family: cursive;
+  background: transparent;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+input {
+  height: 3vh;
+  font-family: cursive;
+  background: transparent;
+}

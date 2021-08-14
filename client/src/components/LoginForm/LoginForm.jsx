@@ -59,7 +59,10 @@ const LoginForm = (props) => {
                           onChange={handleChange}></input>
                         </div>
                         <div className="buttons">
-                <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }}>Make an Account</button> 
+                <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }} onClick={(e) =>{
+                e.preventDefault();
+                window.location.assign('/signUp')
+            }}>Make an Account</button> 
                 <button id="log-in" type="submit" style={{ cursor: 'pointer' }}>Login</button>
                 </div>
                       </form>
