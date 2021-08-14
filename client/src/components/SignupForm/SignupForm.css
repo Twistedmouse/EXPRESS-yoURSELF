@@ -37,9 +37,10 @@
 }
 
 .form-input {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  height: 3vh;
+  height: 5vh;
   font-family: cursive;
   background: transparent;
 }
@@ -53,4 +54,75 @@ input {
   height: 3vh;
   font-family: cursive;
   background: transparent;
+}
+
+#emailInput {
+  align-items: flex-end;
+}
+
+.blurBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  backdrop-filter: blur(10px);
+  opacity: 0.9;
+  z-index: 100;
+}
+
+.modalContent {
+  width: 50vw;
+  z-index: 200;
+  position: fixed;
+  background: linear-gradient(
+    45deg,
+    #ffffff6d,
+    #7edf5e93,
+    #53d8a9,
+    #1546da,
+    #845ec2,
+    #ec7753,
+    #eb8fde,
+    #b6ec5f,
+    #ffffff34
+  );
+  backdrop-filter: blur(10px);
+  background-size: 600%;
+  animation: grad-bg 40s infinite alternate;
+}
+@keyframes grad-bg {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.signUpModal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#submitBtn {
+  margin-top: 15px;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 16px;
+  border-radius: 5rem;
+  background: transparent;
+}
+#submitBtn:hover {
+  background: rgba(255, 255, 255, 0.253);
 }

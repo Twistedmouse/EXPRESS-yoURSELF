@@ -1,8 +1,5 @@
 import "./App.css";
 import React from "react";
-import LandingPage from "./pages/LandingPage";
-import LoginForm from "./components/LoginForm/LoginForm";
-import SignUpPage from "./pages/SignUpPage";
 import {
   ApolloClient,
   InMemoryCache,
@@ -16,6 +13,10 @@ import {
   Switch,
   // Redirect,
 } from "react-router-dom";
+
+import LandingPage from "./pages/LandingPage";
+import LoginForm from "./components/LoginForm/LoginForm";
+import SignUpPage from "./pages/SignUpPage";
 
 // Construct our main GraphQL API endpoint
 // const httpLink = createHttpLink({
