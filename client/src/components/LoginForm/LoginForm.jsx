@@ -24,7 +24,7 @@ const LoginForm = (props) => {
       event.preventDefault();
       console.log(formState);
       try {
-        const { data:{login:{token}} } = await login({
+        const { data: {login:{token}} } = await login({
           variables: { ...formState },
         });
         console.log("token:",data)
@@ -45,8 +45,8 @@ const LoginForm = (props) => {
             <article className="login-form">
                 <h1 id="loginTitle">EXPRESS yoURSELF</h1>
                 <h2 id="signinH2">Sign in:</h2>
-                {data ? (<p>You're successfully signed in!</p>) : (
                 <div className="form-box">
+                {data ? (<p>You're successfully signed in!</p>) : (
                     <form onSubmit={handleFormSubmit}>
                         <div>
                             <label>Username: </label>
@@ -64,8 +64,8 @@ const LoginForm = (props) => {
                 </div>
                       </form>
                 
+                )}{error && (<div>{error.message}</div>)}
                 </div>
-                  )}{error && (<div>{error.message}</div>)}
                 
                 
             </article>
