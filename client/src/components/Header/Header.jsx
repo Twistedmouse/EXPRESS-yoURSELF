@@ -13,8 +13,14 @@ export default function Header() {
     return (
         <div>
             <div id="headerDiv">
-            <button id="profile" type="button" style={{ cursor: 'pointer' }}>Profile</button>
-                <h1 id="headerH1">EXPRESS-yoURSELF</h1>  
+            <button id="profile" type="button" style={{ cursor: 'pointer' }} onClick={(e) =>{
+                e.preventDefault();
+                window.location.assign('/Profile')
+            }}>Profile</button>
+                <h1 id="headerH1" style={{ cursor: 'pointer' }} onClick={(e) =>{
+                e.preventDefault();
+                window.location.assign('/')
+            }}>EXPRESS-yoURSELF</h1>  
             {Auth.loggedIn() ? (
                 <button id="headerLogin" type="button" style={{ cursor: 'pointer' }} onClick={logout}>Logout</button>
             ) : (
