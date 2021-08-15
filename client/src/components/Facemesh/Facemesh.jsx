@@ -17,7 +17,7 @@ function Facemesh() {
     });
     setInterval(() => {
       detectFace(network);
-    }, 10);
+    }, 100);
   };
 
   const detectFace = async (network) => {
@@ -49,6 +49,7 @@ function Facemesh() {
 
   return (
     <div className="App">
+        <div id="faceMessage">Please wait afew minutes for the Facemesh to detect your face</div>
       <Webcam
         ref={webcamReference}
         style={{
@@ -79,6 +80,7 @@ function Facemesh() {
       />
     </div>
   );
+  
 }
 
 export default Facemesh;
