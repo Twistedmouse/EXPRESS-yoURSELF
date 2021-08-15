@@ -7,8 +7,8 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
-    user: async (parent, args, context) => {
-      console.log("this is context.user...", context.user);
+    me: async (parent, args, context) => {
+      console.log("----------WORK DAMMIT-----------");
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
