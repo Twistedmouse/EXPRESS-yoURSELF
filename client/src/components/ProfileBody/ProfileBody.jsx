@@ -1,7 +1,7 @@
 import React from 'react';
 import {useQuery} from '@apollo/client'
 import './ProfileBody.css'
-import { QUERY_ME } from '../../utils/queries'
+import { QUERY_SINGLE_USER, QUERY_ME } from '../../utils/queries'
 import  Auth  from '../../utils/auth'
 // import { Redirect, useParams } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ export default function ProfileBody() {
     
     
     
-    // const { loading, data } = useQuery(QUERY_ME);
+    const { loading, data } = useQuery(QUERY_ME);
     
 
     if (Auth.loggedIn()) {
