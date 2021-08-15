@@ -18,6 +18,7 @@ import LandingPage from "./pages/LandingPage";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpPage from "./pages/SignUpPage";
 import ProfilePage from "./pages/ProfilePage";
+import Facemesh from "./components/Facemesh/Facemesh";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -59,6 +60,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <ProfilePage />
+          </Route>
+          <Route path="/Facemesh">
+            <Facemesh />
           </Route>
         </Switch>
 
