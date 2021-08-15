@@ -21,8 +21,8 @@ html {
 }
 
 #LandingDescription {
-  position: relative;
-  bottom: 400px;
+  /* position: relative;
+  bottom: 400px; */
   height: 250px;
   width: 600px;
   margin-left: auto;
