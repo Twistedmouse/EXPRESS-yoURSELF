@@ -6,7 +6,7 @@ export default function LandingPageBody() {
         <div id="landingBackground">
             <div id="circleBackground"></div>
             <div id="LandingDescription">
-                <p> Lorem ipsum dolor sit amet, consectetur adip</p>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adip</p>
             </div>
         </div>
     )
