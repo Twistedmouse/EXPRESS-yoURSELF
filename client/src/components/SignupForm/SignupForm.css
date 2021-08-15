@@ -74,6 +74,8 @@ input {
 
 .modalContent {
   width: 50vw;
+  height: fit-content;
+
   padding: 20px;
   z-index: 900;
   position: fixed;

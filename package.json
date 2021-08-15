@@ -2,7 +2,7 @@
   "name": "EXPRESS-yoURSELF",
   "version": "1.0.0",
   "description": "Game based around using your facial expressions to progress through the world. (concept demo)",
-  "main": "index.js",
+  "main": "server/server.js",
   "engines": {
     "node": "14.x"
   },

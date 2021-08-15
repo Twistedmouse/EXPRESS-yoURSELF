@@ -61,8 +61,6 @@ function App() {
             <ProfilePage />
           </Route>
         </Switch>
-
-        <div className="App"></div>
       </Router>
     </ApolloProvider>
   );
