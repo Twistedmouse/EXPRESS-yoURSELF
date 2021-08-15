@@ -6,7 +6,9 @@ import SignupForm from '../../components/SignupForm/SignupForm'
 
 import Auth from '../../utils/auth';
 
-
+//-------------------------------------------------------------------
+//update brand to BETA-FACE and re style
+//-------------------------------------------------------------------
 const LoginForm = (props) => {
     const [show, setShow] = useState(false)
     const [formState, setFormState] = useState({ email: '', password: '' });

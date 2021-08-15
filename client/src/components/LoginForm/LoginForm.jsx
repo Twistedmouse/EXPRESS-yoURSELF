@@ -43,36 +43,45 @@ const LoginForm = (props) => {
       });
     };
 
+    if(!props.show){
+      return null;
+  }
+
     return (
-        <div id="background">
-            <article className="login-form">
-                <h1 id="loginTitle">EXPRESS yoURSELF</h1>
-                <h2 id="signinH2">Sign in:</h2>
-                <div className="form-box">
-                {data ? (<p>You're successfully signed in!</p>) : (
-                    <form onSubmit={handleFormSubmit}>
-                        <div>
-                            <label>Username: </label>
-                            <input id="username" name="email" type="text" placeholder="Enter Username"  value={formState.email}
-                          onChange={handleChange}></input>
-                        </div>
-                        <div>
-                            <label>Password: </label>
-                            <input id="password" name="password" type="password" placeholder="Enter Password" value={formState.password}
-                          onChange={handleChange}></input>
-                        </div>
-                        <div className="buttons">
-                <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }} onClick={(e) => setShow(true)}>Make an Account</button> 
-                <button id="log-in" type="submit" style={{ cursor: 'pointer' }}>Login</button>
-                </div>
-                      </form>
-                
-                )}{error && (<div>{error.message}</div>)}
-                </div>
-              <SignupForm onClose={() => setShow(false)} show={show}/>  
-                
-            </article>
+      <div className="signUpModal">
+        <div className="modalContent">
+                  <button id="closeModal" onClick={props.onClose}>❌</button>
+          <div id="background">
+              <article className="login-form">
+                  <h1 id="loginTitle">EXPRESS yoURSELF</h1>
+                  <h2 id="signinH2">Sign in:</h2>
+                  <div className="form-box">
+                  {data ? (<p>You're successfully signed in!</p>) : (
+                      <form onSubmit={handleFormSubmit}>
+                          <div>
+                              <label>Username: </label>
+                              <input id="username" name="email" type="text" placeholder="Enter Username"  value={formState.email}
+                            onChange={handleChange}></input>
+                          </div>
+                          <div>
+                              <label>Password: </label>
+                              <input id="password" name="password" type="password" placeholder="Enter Password" value={formState.password}
+                            onChange={handleChange}></input>
+                          </div>
+                          <div className="buttons">
+                  <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }} onClick={(e) => setShow(true)}>Make an Account</button> 
+                  <button id="log-in" type="submit" style={{ cursor: 'pointer' }}>Login</button>
+                  </div>
+                        </form>
+                  
+                  )}{error && (<div>{error.message}</div>)}
+                  </div>
+                <SignupForm onClose={() => setShow(false)} show={show}/>  
+                  
+              </article>
+          </div>
         </div>
+      </div>
     )
     
 }
