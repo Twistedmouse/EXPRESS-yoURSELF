@@ -75,7 +75,7 @@ input {
 .modalContent {
   width: 50vw;
   padding: 20px;
-  z-index: 200;
+  z-index: 900;
   position: fixed;
   background: linear-gradient(
     45deg,
@@ -111,6 +111,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 900;
 }
 
 #submitBtn {

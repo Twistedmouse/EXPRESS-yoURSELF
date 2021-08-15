@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
+import LoginForm from '../LoginForm/LoginForm'
+
 import './Header.css'
 import Auth from '../../utils/auth'
 
 
+const Header = (props) => {
+    const [show, setShow] = useState(false)
 
-export default function Header() {
     const logout = (event)=>{
         event.preventDefault();
         Auth.logout();
@@ -24,11 +27,15 @@ export default function Header() {
             {Auth.loggedIn() ? (
                 <button id="headerLogin" type="button" style={{ cursor: 'pointer' }} onClick={logout}>Logout</button>
             ) : (
-            <button id="headerLogin" type="button" style={{ cursor: 'pointer' }} onClick={(e) =>{
-                e.preventDefault();
-                window.location.assign('/signIn')
-            }}>Login</button>)}
+            <button id="headerLogin" type="button" style={{ cursor: 'pointer' }} onClick={(e) => setShow(true)}>Login</button>)}
             </div>
+             <LoginForm onClose={() => setShow(false)} show={show}/>
+           
         </div>
     )
 }
+
+
+export default Header
+    
+

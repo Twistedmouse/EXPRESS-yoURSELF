@@ -10,6 +10,15 @@ export const QUERY_ME = gql`
   }
 `;
 
+export const QUERY_SINGLE_USER = gql`
+  query singleUser($userId: ID!) {
+    user(userId: $userId) {
+      _id
+      username
+    }
+  }
+`;
+
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {
