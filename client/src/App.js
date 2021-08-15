@@ -17,7 +17,7 @@ import {
 import LandingPage from "./pages/LandingPage";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpPage from "./pages/SignUpPage";
-
+import ProfilePage from "./pages/ProfilePage";
 // Construct our main GraphQL API endpoint
 // const httpLink = createHttpLink({
 //   uri: "/graphql",
@@ -59,6 +59,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUpPage />
+          </Route>
+          <Route path="/Profile">
+            <ProfilePage />
           </Route>
         </Switch>
 
