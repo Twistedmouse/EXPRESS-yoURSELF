@@ -81,6 +81,7 @@ const LoginForm = (props) => {
               </article>
           </div>
         </div>
+        <div className="blurBackground"></div>
       </div>
     )
     
