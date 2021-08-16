@@ -60,7 +60,7 @@ const LoginForm = (props) => {
                       <form onSubmit={handleFormSubmit}>
                           <div>
                               <label>Username: </label>
-                              <input id="username" name="email" type="text" placeholder="Enter Username"  value={formState.email}
+                              <input id="username" name="email" type="text" placeholder="Enter Email"  value={formState.email}
                             onChange={handleChange}></input>
                           </div>
                           <div>

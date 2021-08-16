@@ -36,10 +36,15 @@ const resolvers = {
       if (!correctPw) {
         throw new AuthenticationError("Incorrect credentials");
       }
-
       const token = signToken(user);
 
       return { token, user };
+    },
+    deleteUser: async (_, { user }, context) => {
+      if (context.user) {
+        return await user.findByIdAndDelete({ _id: context.user._id });
+      }
+      throw new AuthenticationError("You need to be logged in!");
     },
   },
 };

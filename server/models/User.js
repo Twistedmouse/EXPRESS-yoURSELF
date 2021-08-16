@@ -19,9 +19,9 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  // description: {
-  //   type: String,
-  // },
+  description: {
+    type: String,
+  },
 });
 
 userSchema.pre("save", async function (next) {

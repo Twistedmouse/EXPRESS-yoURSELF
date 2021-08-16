@@ -3,3 +3,24 @@
   font-size: 3em;
   text-align: center;
 }
+
+#InfoDescription {
+  margin-top: 200px;
+  height: 250px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5em;
+  border-style: outset;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 25px;
+  padding-top: 40px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  z-index: 50;
+}

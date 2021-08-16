@@ -3,9 +3,10 @@ import { useQuery } from "@apollo/client";
 import "./ProfileBody.css";
 import { QUERY_ME } from "../../utils/queries";
 import Auth from "../../utils/auth";
-// import { Redirect, useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
 export default function ProfileBody() {
+  
   const { loading, data } = useQuery(QUERY_ME);
   const user = data?.me || {};
 
@@ -14,16 +15,19 @@ export default function ProfileBody() {
   }
 
   if(!Auth.loggedIn()){
-    return <p id='login'>YOU MUST BE LOGGED IN TO VIEW PROFILE.</p>
+    return <div id="circleBackground">
+      <p id='login'><br></br><br></br>YOU MUST BE LOGGED IN TO VIEW PROFILE.</p>
+    </div>
+    
   }
 
-  console.log(user);
+  console.log(user.context);
   if (Auth.loggedIn()) {
     // console.log(Auth.getUser())
     return (
       <div>
         <div id="landingBackground">
-          <div id="LandingDescription">
+          <div id="InfoDescription">
             <div id="profileInfo">
               <p>Username: {Auth.getUser().data.username}</p>
               <button
@@ -33,7 +37,7 @@ export default function ProfileBody() {
               >
                 EDIT
               </button>
-              <p>Description: </p>
+              <p>Description: {Auth.getUser().data.description}</p>
               <button
                 className="editProfile"
                 type="button"
@@ -47,7 +51,7 @@ export default function ProfileBody() {
             <button
               className="deleteProfile"
               type="button"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer" }} 
             >
               DELETE PROFILE
             </button>

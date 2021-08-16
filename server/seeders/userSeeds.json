@@ -2,16 +2,19 @@
     {
         "username": "user1",
         "email": "useremail@email.com",
-        "password": "userpass"
+        "password": "userpass",
+        "description": "user description"
     },
     {
         "username": "joe",
         "email": "joeemail@email.com",
-        "password": "joepass"
+        "password": "joepass",
+        "description": "user description"
     },
     {
         "username": "testuser",
         "email": "testusermail@email.com",
-        "password": "testpass"
+        "password": "testpass",
+        "description": "user description"
     }
 ]

@@ -6,6 +6,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
+      description
     }
   }
 `;
@@ -15,6 +16,7 @@ export const QUERY_SINGLE_USER = gql`
     user(userId: $userId) {
       _id
       username
+      description
     }
   }
 `;
@@ -25,6 +27,7 @@ export const QUERY_USER = gql`
       _id
       username
       email
+      description
     }
   }
 `;
