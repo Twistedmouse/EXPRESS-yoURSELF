@@ -18,7 +18,7 @@ import LandingPage from "./pages/LandingPage";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpPage from "./pages/SignUpPage";
 import ProfilePage from "./pages/ProfilePage";
-import Facemesh from "./components/Facemesh/Facemesh";
+import Facemesh from "./pages/FaceMeshPage";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",

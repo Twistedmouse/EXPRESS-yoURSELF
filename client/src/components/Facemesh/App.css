@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+#faceMessage {
+  font-family: cursive;
+  font-size: 3em;
+  text-align: center;
+}
+
+#cam {
+  border-radius: 50%;
+}

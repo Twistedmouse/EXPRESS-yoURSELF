@@ -9,6 +9,14 @@ export default function ProfileBody() {
   const { loading, data } = useQuery(QUERY_ME);
   const user = data?.me || {};
 
+  if(loading){
+    return <p id='login'>Loading...</p>
+  }
+
+  if(!Auth.loggedIn()){
+    return <p id='login'>YOU MUST BE LOGGED IN TO VIEW PROFILE.</p>
+  }
+
   console.log(user);
   if (Auth.loggedIn()) {
     // console.log(Auth.getUser())
@@ -33,6 +41,7 @@ export default function ProfileBody() {
               >
                 EDIT
               </button>
+              <p>Charts coming soon!!</p>
             </div>
 
             <button

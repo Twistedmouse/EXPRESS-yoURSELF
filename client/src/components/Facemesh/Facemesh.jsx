@@ -50,7 +50,7 @@ function Facemesh() {
   return (
     <div className="App">
         <div id="faceMessage">Please wait afew minutes for the Facemesh to detect your face</div>
-      <Webcam
+      <Webcam id="cam"
         ref={webcamReference}
         style={{
           position: "absolute",
