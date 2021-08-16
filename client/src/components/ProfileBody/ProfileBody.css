@@ -6,7 +6,7 @@
 
 #InfoDescription {
   margin-top: 200px;
-  height: 250px;
+  height: 300px;
   width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -23,4 +23,36 @@
   );
   backdrop-filter: blur(10px);
   z-index: 50;
+  font-family: cursive;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.editProfile {
+  font-family: cursive;
+  font-size: 16;
+  background: transparent;
+  border-radius: 2rem;
+}
+.editProfile:hover {
+  background: rgba(255, 255, 255, 0.253);
+}
+
+.deleteProfile {
+  font-family: cursive;
+  font-size: 16;
+  background: transparent;
+  border-radius: 2rem;
+  height: 4em;
+}
+.deleteProfile:hover {
+  background: rgba(211, 0, 0, 0.685);
+}
+
+#chartsComing {
+  font-size: 20px;
+  color: red;
 }

@@ -3,11 +3,13 @@ import { useQuery } from "@apollo/client";
 import "./ProfileBody.css";
 import { QUERY_ME } from "../../utils/queries";
 import Auth from "../../utils/auth";
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export default function ProfileBody() {
-  
-  const { loading, data } = useQuery(QUERY_ME);
+  const { username } = useParams()
+  const { loading, data } = useQuery(QUERY_ME, { 
+    variables: {username: username}
+  });
   const user = data?.me || {};
 
   if(loading){
@@ -21,7 +23,7 @@ export default function ProfileBody() {
     
   }
 
-  console.log(user.context);
+  console.log(user.username);
   if (Auth.loggedIn()) {
     // console.log(Auth.getUser())
     return (
@@ -45,7 +47,7 @@ export default function ProfileBody() {
               >
                 EDIT
               </button>
-              <p>Charts coming soon!!</p>
+              <p id="chartsComing">Charts coming soon!!</p>
             </div>
 
             <button
