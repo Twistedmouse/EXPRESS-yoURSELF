@@ -19,7 +19,7 @@ Heroku link of progress so far: [EXPRESS-yoURSELF](https://react-express-yoursel
 - [Usage](#usage)
 - [Planning](#planning)
 - [License](#license)
-- [Future Plans](#future)
+- [Future Plans](#future-plans)
 - [Contributing](#contributing)
 - [Questions](#questions)
 - [Presentation](#presentation)
@@ -61,3 +61,14 @@ Once I had all my plans down I [story boarded](https://drive.google.com/drive/fo
 ## License
 
 This repository is licensed under the [GPL-3.0](https://opensource.org/licenses/GPL-3.0) license.
+
+---
+
+## Future Plans
+
+- What does the future hold for EXPRESS-yoURSELF?\
+  Well first of all I would like to go through and restyle the whole app and give it a more professional look my styling started with the vision that the app was going to be more game related but now that the vision has changed so shall tha appearance.\
+- Next the key feature I need to implement is for the landmark detection to detect emotions. through my research i am confident I can achieve this.
+- once emotions are detected i can focus on recording that data and translating it to a chart using [chart.js](https://www.chartjs.org/) mock up of the chart below: https
+
+![](screenshots\chart.png)
