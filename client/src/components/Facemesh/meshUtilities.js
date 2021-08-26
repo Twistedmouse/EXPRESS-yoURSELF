@@ -178,7 +178,7 @@ const drawPath = (ctx, points, closePath) => {
   if (closePath) {
     region.closePath();
   }
-  ctx.strokeStyle = "grey";
+  ctx.strokeStyle = "green";
   ctx.stroke(region);
 };
 
@@ -207,9 +207,11 @@ export const drawMesh = (predictions, ctx) => {
 
         ctx.beginPath();
         ctx.arc(x, y, 1 /* radius */, 0, 3 * Math.PI);
-        ctx.fillStyle = "aqua";
+        ctx.fillStyle = "grey";
         ctx.fill();
       }
     });
   }
 };
+
+// for color scheme green lines and grey dots suit ; but grey lines aqua dot look clear

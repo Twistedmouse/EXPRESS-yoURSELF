@@ -1,0 +1,75 @@
+html {
+  background: linear-gradient(
+    180deg,
+    rgb(98, 99, 99) 30%,
+    rgb(72, 87, 73) 80%,
+    rgb(32, 136, 29) 100%
+  );
+}
+
+@font-face {
+  font-family: computer_7;
+  src: url("../components/computer_7.ttf") format("truetype");
+}
+/* header css -----------------------------------------------------*/
+#headerDiv {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 4px outset;
+  background: radial-gradient(
+    rgba(30, 211, 54, 0.219) 10%,
+    rgba(46, 46, 46, 0.527) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+
+#headerH1 {
+  font-size: 48px;
+  background: -webkit-linear-gradient(
+    rgb(46, 46, 46) 60%,
+    rgb(40, 201, 67) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: computer_7;
+}
+#headerH1:hover {
+  background: -webkit-linear-gradient(rgb(40, 201, 67), rgb(46, 46, 46));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#headerLogin {
+  color: rgb(184, 184, 184);
+  width: 120px;
+  font-family: computer_7;
+  font-size: 32px;
+  border: 3px outset;
+  background: rgb(83, 83, 83);
+}
+#headerLogin:hover {
+  color: rgb(25, 204, 25);
+  border: 3px inset rgb(31, 248, 31);
+}
+
+#chartsBtn {
+  /* width: 120px; */
+  color: rgb(184, 184, 184);
+  background: rgb(83, 83, 83);
+  padding: 15px;
+  font-family: computer_7;
+  font-size: 32px;
+  border: 3px outset;
+}
+#chartsBtn:hover {
+  color: rgb(146, 16, 16);
+  border: 3px inset rgb(230, 18, 18);
+}
+
+/* --------------------------------------------------------------- */
+
+/* LandingPage css ----------------------------------------------- */
+
+/* --------------------------------------------------------------- */

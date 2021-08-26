@@ -1,0 +1,135 @@
+/* header css -----------------------------------------------------*/
+
+#headerDiv {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid rgba(255, 255, 255, 0.116) 8px;
+  border-style: outset;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 25px;
+  padding-top: 40px;
+  background: radial-gradient(
+    rgba(55, 182, 43, 0.541),
+    rgba(49, 49, 49, 0.589) 80%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 800;
+}
+
+#headerH1 {
+  background: linear-gradient(
+      to bottom,
+      rgb(99, 243, 62) 6%,
+      rgba(26, 121, 31, 0.384) 60%,
+      #5e5e5e 100%
+    ),
+    url(https://t3.ftcdn.net/jpg/02/95/65/94/360_F_295659437_PRGNuxt8UYvLDPOZPgl5DK7ZDxZn7REN.jpg);
+
+  background-attachment: inherit;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: cursive;
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0%;
+}
+
+#profile {
+  margin-left: 20px;
+  font-family: cursive;
+  font-size: 2em;
+  background: transparent;
+  border-radius: 2rem;
+  height: fit-content;
+  padding: 15px;
+  width: 150px;
+}
+#profile:hover {
+  background: rgba(255, 255, 255, 0.253);
+}
+
+#headerLogin {
+  margin-right: 20px;
+  font-family: cursive;
+  font-size: 2em;
+  background: transparent;
+  border-radius: 2rem;
+  height: fit-content;
+  padding: 15px;
+  width: 150px;
+}
+#headerLogin:hover {
+  background: rgba(255, 255, 255, 0.253);
+}
+/*-------------------------------------------------------------------  */
+
+/* Landing page css */
+html {
+  /* background: rgb(129, 0, 129); */
+  height: auto;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgb(97, 97, 97) 6%,
+    rgb(56, 161, 161) 40%,
+    rgb(44, 179, 51) 100%
+  );
+}
+
+#circleBackground {
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  background: rgb(49, 124, 209);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+#LandingDescription {
+  position: relative;
+  bottom: 400px;
+  height: 250px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5em;
+  border-style: outset;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 25px;
+  padding-top: 40px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  z-index: 50;
+}
+
+#startButton {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-family: cursive;
+  font-size: 2em;
+  background: transparent;
+  border-radius: 2rem;
+  height: fit-content;
+  padding: 15px;
+  width: 150px;
+}
+
+#LandingDescription {
+  font-family: cursive;
+  font-size: 1.1em;
+  text-align: center;
+}

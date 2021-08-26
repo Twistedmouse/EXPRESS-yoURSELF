@@ -34,7 +34,7 @@ html {
 
   background-attachment: inherit;
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
   font-family: cursive;
   font-size: 4em;
   font-weight: bold;
