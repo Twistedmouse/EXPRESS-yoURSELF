@@ -23,7 +23,7 @@ export default function ProfileBody() {
     
   }
 
-  console.log(user.username);
+  // console.log(user.username);
   if (Auth.loggedIn()) {
     // console.log(Auth.getUser())
     return (

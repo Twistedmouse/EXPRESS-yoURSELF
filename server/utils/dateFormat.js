@@ -1,7 +1,7 @@
 const addDateSuffix = (date) => {
   let dateStr = date.toString();
 
-  // get last char of date string
+  // TODO: make sure this is the format we want for timestamp
   const lastChar = dateStr.charAt(dateStr.length - 1);
 
   if (lastChar === "1" && dateStr !== "11") {
@@ -22,7 +22,6 @@ module.exports = (
   timestamp,
   { monthLength = "short", dateSuffix = true } = {}
 ) => {
-  // create month object
   const months = {
     0: monthLength === "short" ? "Jan" : "January",
     1: monthLength === "short" ? "Feb" : "February",
