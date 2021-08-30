@@ -3,13 +3,40 @@ html {
     180deg,
     rgb(98, 99, 99) 30%,
     rgb(72, 87, 73) 80%,
-    rgb(32, 136, 29) 100%
+    rgb(87, 241, 252) 145%
   );
 }
 
+/* ---Keyframes--------------------------------------------------- */
 @font-face {
   font-family: computer_7;
   src: url("../components/computer_7.ttf") format("truetype");
+}
+
+@keyframes leftToRight {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes loginTextChange {
+  0% {
+    color: rgb(64, 255, 58);
+  }
+  50% {
+    color: rgba(133, 248, 200, 0.788);
+    border: 3px inset rgba(133, 248, 200, 0.788);
+  }
+  100% {
+    color: rgb(62, 255, 239);
+    border: 3px inset rgb(60, 255, 245);
+  }
 }
 /* header css -----------------------------------------------------*/
 #headerDiv {
@@ -17,9 +44,9 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 4px outset;
+  border-bottom: 4px outset rgba(159, 247, 239, 0.795);
   background: radial-gradient(
-    rgba(30, 211, 54, 0.219) 10%,
+    rgba(36, 250, 239, 0.219) 10%,
     rgba(46, 46, 46, 0.527) 100%
   );
   backdrop-filter: blur(10px);
@@ -28,35 +55,42 @@ html {
 #headerH1 {
   font-size: 48px;
   background: -webkit-linear-gradient(
-    rgb(46, 46, 46) 60%,
-    rgb(40, 201, 67) 100%
+    rgb(46, 46, 46) 50%,
+    rgb(133, 133, 133) 100%
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: computer_7;
 }
 #headerH1:hover {
-  background: -webkit-linear-gradient(rgb(40, 201, 67), rgb(46, 46, 46));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, rgb(59, 253, 253), rgb(46, 46, 46));
+  background-size: 400% 400%;
+  background-clip: text;
+  animation: leftToRight 4s ease-in-out infinite;
+  animation-delay: 1s;
+  transition: color 0.2s ease-in-out;
+  color: rgba(0, 0, 0, 0);
 }
 
 #headerLogin {
   color: rgb(184, 184, 184);
-  width: 120px;
+  /* once charts is added resize button accordingly  */
+  width: 250px;
   font-family: computer_7;
-  font-size: 32px;
+  font-size: 36px;
   border: 3px outset;
+
   background: rgb(83, 83, 83);
 }
 #headerLogin:hover {
-  color: rgb(25, 204, 25);
+  animation: loginTextChange 2s ease-in-out infinite alternate;
+  transition: color 0.2s ease-in-out;
   border: 3px inset rgb(31, 248, 31);
 }
 
 #chartsBtn {
   /* width: 120px; */
-  color: rgb(184, 184, 184);
+  color: rgb(133, 133, 133);
   background: rgb(83, 83, 83);
   padding: 15px;
   font-family: computer_7;
@@ -64,8 +98,21 @@ html {
   border: 3px outset;
 }
 #chartsBtn:hover {
-  color: rgb(146, 16, 16);
+  animation: chartsTextChange 2s ease-in-out infinite alternate;
   border: 3px inset rgb(230, 18, 18);
+}
+@keyframes chartsTextChange {
+  0% {
+    color: rgb(146, 16, 16);
+  }
+  50% {
+    color: rgb(177, 10, 10);
+    border: 3px inset rgb(92, 86, 86);
+  }
+  100% {
+    color: rgb(46, 42, 42);
+    border: 3px inset rgb(22, 2, 2);
+  }
 }
 
 /* --------------------------------------------------------------- */

@@ -178,7 +178,7 @@ const drawPath = (ctx, points, closePath) => {
   if (closePath) {
     region.closePath();
   }
-  ctx.strokeStyle = "green";
+  ctx.strokeStyle = "grey";
   ctx.stroke(region);
 };
 
@@ -207,7 +207,7 @@ export const drawMesh = (predictions, ctx) => {
 
         ctx.beginPath();
         ctx.arc(x, y, 1 /* radius */, 0, 3 * Math.PI);
-        ctx.fillStyle = "grey";
+        ctx.fillStyle = "aqua";
         ctx.fill();
       }
     });
