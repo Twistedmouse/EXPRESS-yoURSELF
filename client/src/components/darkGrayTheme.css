@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   background: linear-gradient(
     180deg,
     rgb(98, 99, 99) 30%,
@@ -112,6 +113,65 @@ html {
     font-family: computer_7;
   }
 }
+
+@keyframes landingBoxBorder {
+  0% {
+    border: 4px outset rgba(159, 247, 239, 0.795);
+  }
+  50% {
+    border: 4px outset rgb(179, 219, 219);
+  }
+  100% {
+    border: 4px outset rgb(61, 255, 255);
+  }
+}
+
+@keyframes rainbowBorder {
+  0% {
+    color: #0ff8f8;
+    border: 4px outset #ce995dd2;
+  }
+  10% {
+    color: #af2359;
+    border: 4px outset #7fe65c;
+  }
+  20% {
+    color: #53d8a9;
+    border: 4px outset #53d8a9;
+  }
+  30% {
+    color: #793ac26d;
+    border: 4px outset #1546da;
+  }
+  40% {
+    color: #f8ff70;
+    border: 4px outset #845ec2;
+  }
+  50% {
+    color: #eb8fde;
+    border: 4px outset #ec7753;
+  }
+  60% {
+    color: #ec7753;
+    border: 4px outset #eb8fde;
+  }
+  70% {
+    color: #845ec2;
+    border: 4px outset #f8ff70;
+  }
+  80% {
+    color: #1546da;
+    border: 4px outset #7a3ac2;
+  }
+  90% {
+    color: #7edf5e93;
+    border: 4px outset #af2359;
+  }
+  100% {
+    color: #ce995dd2;
+    border: 4px outset #0ff8f8;
+  }
+}
 /* header css -----------------------------------------------------*/
 #headerDiv {
   height: fit-content;
@@ -124,6 +184,7 @@ html {
   );
   backdrop-filter: blur(10px);
   animation: headerBorder 4s ease-in-out infinite alternate;
+  margin-bottom: 100px;
 }
 
 #headerH1 {
@@ -170,7 +231,7 @@ html {
 }
 
 #chartsBtn {
-  /* width: 120px; */
+  width: 250px;
   color: rgb(133, 133, 133);
   background: rgb(83, 83, 83);
   padding: 15px;
@@ -187,10 +248,14 @@ html {
 
 /* LandingPage css ----------------------------------------------- */
 #LandingDescription {
-  margin-top: 200px;
+  font-family: computer_7;
+  font-size: 30px;
+  font-weight: border;
+  text-align: center;
+  color: rgb(59, 59, 59);
+  min-height: 150px;
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   border-radius: 5em;
   border-style: outset;
   border-bottom-right-radius: 2rem;
@@ -203,6 +268,27 @@ html {
     rgba(255, 255, 255, 0.2)
   );
   backdrop-filter: blur(10px);
+  animation: landingBoxBorder 4s ease-in-out infinite alternate;
+}
+
+#startButton {
+  color: rgb(184, 184, 184);
+  width: 250px;
+  font-family: computer_7;
+  font-size: 32px;
+  border: 3px outset;
+  background: rgb(83, 83, 83);
+}
+#startButton:hover {
+  animation: rainbowBorder 2s ease-in-out infinite alternate;
+  transition: color 0.2s ease-in-out;
 }
 
 /* --------------------------------------------------------------- */
+
+/* --- media queries ----------------------------------------------*/
+@media (max-width: 768px) {
+  html {
+    height: auto;
+  }
+}
