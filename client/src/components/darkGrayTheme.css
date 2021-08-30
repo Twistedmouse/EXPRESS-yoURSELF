@@ -38,18 +38,92 @@ html {
     border: 3px inset rgb(60, 255, 245);
   }
 }
+
+@keyframes chartsTextChange {
+  0% {
+    color: rgb(146, 16, 16);
+  }
+  50% {
+    color: rgb(177, 10, 10);
+    border: 3px inset rgb(92, 86, 86);
+  }
+  100% {
+    color: rgb(46, 42, 42);
+    border: 3px inset rgb(22, 2, 2);
+  }
+}
+
+@keyframes headerBorder {
+  0% {
+    border-bottom: 4px outset rgba(159, 247, 239, 0.795);
+  }
+  50% {
+    border-bottom: 4px outset rgb(179, 219, 219);
+  }
+  100% {
+    border-bottom: 4px outset rgb(61, 255, 255);
+  }
+}
+
+@keyframes headerTitle {
+  0% {
+    background: -webkit-linear-gradient(
+      rgb(46, 46, 46) 50%,
+      rgb(133, 133, 133) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: computer_7;
+  }
+  25% {
+    background: -webkit-linear-gradient(
+      rgb(46, 46, 46) 45%,
+      rgb(133, 133, 133) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: computer_7;
+  }
+  50% {
+    background: -webkit-linear-gradient(
+      rgb(46, 46, 46) 40%,
+      rgb(133, 133, 133) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: computer_7;
+  }
+  75% {
+    background: -webkit-linear-gradient(
+      rgb(46, 46, 46) 35%,
+      rgb(133, 133, 133) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: computer_7;
+  }
+  100% {
+    background: -webkit-linear-gradient(
+      rgb(46, 46, 46) 30%,
+      rgb(133, 133, 133) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: computer_7;
+  }
+}
 /* header css -----------------------------------------------------*/
 #headerDiv {
   height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 4px outset rgba(159, 247, 239, 0.795);
   background: radial-gradient(
     rgba(36, 250, 239, 0.219) 10%,
     rgba(46, 46, 46, 0.527) 100%
   );
   backdrop-filter: blur(10px);
+  animation: headerBorder 4s ease-in-out infinite alternate;
 }
 
 #headerH1 {
@@ -61,14 +135,21 @@ html {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: computer_7;
+  animation: headerTitle 2s ease-in-out infinite alternate;
 }
+
 #headerH1:hover {
-  background: linear-gradient(90deg, rgb(59, 253, 253), rgb(46, 46, 46));
+  background: linear-gradient(
+    90deg,
+    rgb(46, 46, 46),
+    rgb(197, 201, 201),
+    rgb(59, 253, 253),
+    rgb(0, 159, 199),
+    rgb(0, 199, 199)
+  );
   background-size: 400% 400%;
   background-clip: text;
-  animation: leftToRight 4s ease-in-out infinite;
-  animation-delay: 1s;
-  transition: color 0.2s ease-in-out;
+  animation: leftToRight 3s ease-in-out infinite;
   color: rgba(0, 0, 0, 0);
 }
 
@@ -101,22 +182,27 @@ html {
   animation: chartsTextChange 2s ease-in-out infinite alternate;
   border: 3px inset rgb(230, 18, 18);
 }
-@keyframes chartsTextChange {
-  0% {
-    color: rgb(146, 16, 16);
-  }
-  50% {
-    color: rgb(177, 10, 10);
-    border: 3px inset rgb(92, 86, 86);
-  }
-  100% {
-    color: rgb(46, 42, 42);
-    border: 3px inset rgb(22, 2, 2);
-  }
-}
 
 /* --------------------------------------------------------------- */
 
 /* LandingPage css ----------------------------------------------- */
+#LandingDescription {
+  margin-top: 200px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5em;
+  border-style: outset;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 25px;
+  padding-top: 40px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(10px);
+}
 
 /* --------------------------------------------------------------- */
