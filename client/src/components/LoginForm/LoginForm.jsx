@@ -1,4 +1,4 @@
-import "./LoginForm.css"
+import "../darkGrayTheme.css"
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
@@ -69,7 +69,7 @@ const LoginForm = (props) => {
                             onChange={handleChange}></input>
                           </div>
                           <div className="buttons">
-                  <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }} onClick={(e) => setShow(true)}>Make an Account</button> 
+                  <button id="signup-form-link" type="button" style={{ cursor: 'pointer' }} onClick={(e) => setShow(true)}>Sign Up</button> 
                   <button id="log-in" type="submit" style={{ cursor: 'pointer' }}>Login</button>
                   </div>
                         </form>

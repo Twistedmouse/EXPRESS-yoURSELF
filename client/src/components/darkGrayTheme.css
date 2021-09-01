@@ -276,7 +276,7 @@ html {
   width: 250px;
   font-family: computer_7;
   font-size: 32px;
-  border: 3px outset;
+  border: 4px outset;
   background: rgb(83, 83, 83);
 }
 #startButton:hover {
@@ -284,6 +284,174 @@ html {
   transition: color 0.2s ease-in-out;
 }
 
+/* --------------------------------------------------------------- */
+
+/* --------- login/signUp modal------------------------------------------ */
+#background {
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgb(98, 99, 99) 30%,
+    rgb(72, 87, 73) 80%,
+    rgb(87, 241, 252) 145%
+  );
+}
+
+#loginTitle,
+#signUpTitle {
+  font-family: computer_7;
+  background: -webkit-linear-gradient(
+    rgb(46, 46, 46) 50%,
+    rgb(133, 133, 133) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.3vw;
+  font-weight: bold;
+  text-align: center;
+  margin: 0%;
+}
+
+#signinH2,
+#signUpH2 {
+  font-family: computer_7;
+  background: -webkit-linear-gradient(
+    rgb(46, 46, 46) 50%,
+    rgb(133, 133, 133) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.8vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0%;
+}
+
+.form-box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+  width: fit-content;
+  height: fit-content;
+  border: solid rgba(255, 255, 255, 0.116) 8px;
+  border-style: outset;
+  border-radius: 3rem;
+  padding: 25px;
+  padding-top: 40px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  animation: landingBoxBorder 4s ease-in-out infinite alternate;
+  z-index: 800;
+  font-size: 36px;
+  font-family: computer_7;
+}
+
+input {
+  height: 3vh;
+  font-family: cursive;
+  background: transparent;
+}
+input:hover {
+  background: rgba(255, 255, 255, 0.116);
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#log-in {
+  color: rgb(184, 184, 184);
+  padding-left: 25px;
+  padding-right: 25px;
+  font-family: computer_7;
+  font-size: 34px;
+  border: 3px outset;
+  background: rgb(83, 83, 83);
+}
+#log-in:hover {
+  animation: loginTextChange 2s ease-in-out infinite alternate;
+  transition: color 0.2s ease-in-out;
+  border: 3px inset rgb(31, 248, 31);
+}
+
+#signup-form-link {
+  color: rgb(184, 184, 184);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: computer_7;
+  font-size: 34px;
+  border: 3px outset;
+  background: rgb(83, 83, 83);
+}
+#signup-form-link:hover {
+  animation: loginTextChange 2s ease-in-out infinite alternate;
+  transition: color 0.2s ease-in-out;
+  border: 3px inset rgb(31, 248, 31);
+}
+
+#submitBtn {
+  margin-top: 20px;
+  /* margin left only there cos wont center with justify content */
+  margin-left: 33%;
+  color: rgb(184, 184, 184);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: computer_7;
+  font-size: 34px;
+  border: 3px outset;
+  background: rgb(83, 83, 83);
+}
+#submitBtn:hover {
+  animation: loginTextChange 2s ease-in-out infinite alternate;
+  transition: color 0.2s ease-in-out;
+  border: 3px inset rgb(31, 248, 31);
+}
+
+.modalContent {
+  width: 50vw;
+  height: fit-content;
+  padding: 20px;
+  z-index: 900;
+  position: fixed;
+  background: linear-gradient(
+    180deg,
+    rgb(98, 99, 99) 30%,
+    rgb(72, 87, 73) 80%,
+    rgb(87, 241, 252) 135%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.signUpModal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+}
+
+.blurBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  backdrop-filter: blur(10px);
+  opacity: 0.9;
+  z-index: 100;
+}
 /* --------------------------------------------------------------- */
 
 /* --- media queries ----------------------------------------------*/
