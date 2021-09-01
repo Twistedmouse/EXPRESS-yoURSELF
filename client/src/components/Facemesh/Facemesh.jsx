@@ -38,7 +38,7 @@ function Facemesh() {
       canvasReference.current.height = videoHeight;
       // Detecting the face estimate
       const faceEstimate = await network.estimateFaces(video);
-      console.log(faceEstimate);
+      // console.log(faceEstimate);
       //Get canvas context
       const ctx = canvasReference.current.getContext("2d");
       drawMesh(faceEstimate, ctx);

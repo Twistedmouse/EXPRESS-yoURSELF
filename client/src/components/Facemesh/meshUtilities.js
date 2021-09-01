@@ -213,3 +213,5 @@ export const drawMesh = (predictions, ctx) => {
     });
   }
 };
+
+// for color scheme green lines and grey dots suit ; but grey lines aqua dot look clear

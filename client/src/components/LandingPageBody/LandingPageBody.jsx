@@ -1,5 +1,5 @@
 import React from 'react'
-import "./LandingPageBody.css"
+import "../darkGrayTheme.css"
 
 export default function LandingPageBody() {
     return (

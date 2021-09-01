@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import LoginForm from '../LoginForm/LoginForm'
 
-import './Header.css'
+import '../darkGrayTheme.css'
 import Auth from '../../utils/auth'
 
 
@@ -16,10 +16,10 @@ const Header = (props) => {
     return (
         <div>
             <div id="headerDiv">
-            <button id="profile" type="button" style={{ cursor: 'pointer' }} onClick={(e) =>{
+            <button id="chartsBtn" type="button" style={{ cursor: 'pointer' }} onClick={(e) =>{
                 e.preventDefault();
                 window.location.assign('/Profile')
-            }}>Profile</button>
+            }}>Charts (coming soon)</button>
                 <h1 id="headerH1" style={{ cursor: 'pointer' }} onClick={(e) =>{
                 e.preventDefault();
                 window.location.assign('/')
