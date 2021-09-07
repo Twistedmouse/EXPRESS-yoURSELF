@@ -34,8 +34,8 @@ export default function ProfileBody() {
       <div>
         <div id="landingBackground">
           <p id="comingSoon">
-            SAVED CHARTS COMING SOON COME BACK LATER FOR PROFILE SECTION NOT
-            INCLUDED IN DEMO APP!
+            SAVED CHARTS COMING SOON COME BACK LATER FOR PROFILE SECTION, NOT
+            AVAILABLE IN DEMO APP!
           </p>
           <div id="InfoDescription">
             <div id="profileInfo">
