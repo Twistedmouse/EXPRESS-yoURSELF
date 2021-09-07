@@ -15,14 +15,19 @@ const data = {
           r: 20,
         },
         {
-          x: 10,
+          x: 12,
           y: 62,
           r: 12,
+        },
+        {
+          x: 20,
+          y: 80,
+          r: 19,
         },
       ],
       backgroundColor: ["	rgb(255, 255, 229,0.8)"],
       borderColor: ["orange"],
-      borderWidth: 1,
+      borderWidth: 2,
       clip: { left: false, top: false, right: false, bottom: false },
     },
     {
@@ -36,12 +41,22 @@ const data = {
         {
           x: 10,
           y: 84,
-          r: 15,
+          r: 18,
+        },
+        {
+          x: 8,
+          y: 80,
+          r: 16,
+        },
+        {
+          x: 9,
+          y: 83,
+          r: 18,
         },
       ],
       backgroundColor: ["rgb(230, 255, 255,0.9)"],
       borderColor: ["blue"],
-      borderWidth: 1,
+      borderWidth: 2,
       clip: { left: false, top: false, right: false, bottom: false },
     },
     {
@@ -53,14 +68,19 @@ const data = {
           r: 20,
         },
         {
-          x: 10,
-          y: 62,
-          r: 12,
+          x: 15,
+          y: 90,
+          r: 20,
+        },
+        {
+          x: 17,
+          y: 70,
+          r: 17,
         },
       ],
       backgroundColor: ["	rgb(255, 229, 229,0.8)"],
       borderColor: ["red"],
-      borderWidth: 1,
+      borderWidth: 2,
       clip: { left: false, top: false, right: false, bottom: false },
     },
     {
@@ -68,18 +88,18 @@ const data = {
       data: [
         {
           x: 1.5,
-          y: 90,
-          r: 20,
+          y: 38,
+          r: 11,
         },
         {
-          x: 10,
-          y: 62,
-          r: 12,
+          x: 6,
+          y: 65,
+          r: 14,
         },
       ],
       backgroundColor: ["	rgb(255, 255, 255,0.8)"],
       borderColor: ["grey"],
-      borderWidth: 1,
+      borderWidth: 2,
       clip: { left: false, top: false, right: false, bottom: false },
     },
     {
@@ -91,42 +111,67 @@ const data = {
           r: 14,
         },
         {
-          x: 10,
-          y: 62,
-          r: 12,
+          x: 5,
+          y: 74,
+          r: 17,
+        },
+        {
+          x: 24,
+          y: 66,
+          r: 16,
+        },
+        {
+          x: 26,
+          y: 70,
+          r: 17,
+        },
+        {
+          x: 25,
+          y: 64,
+          r: 16,
         },
       ],
-      backgroundColor: ["	rgb(255, 229, 249,0.8)"],
-      borderColor: ["pink"],
-      borderWidth: 1,
+      backgroundColor: ["	rgb(229, 242, 255,0.8)"],
+      borderColor: ["purple"],
+      borderWidth: 2,
       clip: { left: false, top: false, right: false, bottom: false },
     },
     {
       label: "Fear",
       data: [
         {
-          x: 1.5,
-          y: 90,
-          r: 20,
+          x: 18,
+          y: 60,
+          r: 16,
         },
         {
-          x: 10,
-          y: 62,
-          r: 12,
+          x: 7,
+          y: 20,
+          r: 8,
+        },
+        {
+          x: 30,
+          y: 92,
+          r: 19,
+        },
+        {
+          x: 29,
+          y: 90,
+          r: 19,
         },
       ],
-      backgroundColor: ["	rgb(229, 229, 255,0.8)"],
-      borderColor: ["purple"],
-      borderWidth: 1,
+      backgroundColor: ["	rgb(0, 0,0,0.5)"],
+      borderColor: ["grey"],
+      borderWidth: 2,
       clip: { left: false, top: false, right: false, bottom: false },
     },
     {
       label: "Disgust",
       data: [
         {
-          x: 1.5,
-          y: 90,
-          r: 20,
+          x: 28,
+          y: 38,
+          r: 13,
         },
         {
           x: 10,
@@ -136,20 +181,13 @@ const data = {
       ],
       backgroundColor: ["	rgb(229, 255, 236,0.8)"],
       borderColor: ["lime"],
-      borderWidth: 1,
+      borderWidth: 2,
       clip: { left: false, top: false, right: false, bottom: false },
     },
   ],
 };
 
 const options = {
-  legend: {
-    labels: {
-      // This more specific font property overrides the global property
-      fontColor: "yellow",
-    },
-  },
-
   layout: {
     padding: { right: 20 },
   },
