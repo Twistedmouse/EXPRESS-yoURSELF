@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import "../darkGrayTheme.css";
 import * as tf from "@tensorflow/tfjs";
@@ -49,8 +48,11 @@ function Facemesh() {
 
   return (
     <div className="App">
-        <div id="faceMessage">Please wait afew minutes for the Facemesh to detect your face</div>
-      <Webcam id="cam"
+      <div id="faceMessage">
+        Please wait afew minutes for the Facemesh to detect your face
+      </div>
+      <Webcam
+        id="cam"
         ref={webcamReference}
         style={{
           position: "absolute",
@@ -78,9 +80,21 @@ function Facemesh() {
           height: 500,
         }}
       />
+      <div id="viewChartBtn">
+        <button
+          id="viewChart"
+          type="button"
+          style={{ cursor: "pointer" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.assign("/Chart");
+          }}
+        >
+          {"->"}
+        </button>
+      </div>
     </div>
   );
-  
 }
 
 export default Facemesh;

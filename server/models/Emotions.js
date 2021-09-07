@@ -71,7 +71,7 @@ const emotionsSchema = new Schema({
       },
     },
     {
-      neural: {
+      neutral: {
         type: Integer,
         idNumber: 6,
       },
