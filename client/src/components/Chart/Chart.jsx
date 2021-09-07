@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../darkGrayTheme.css";
+import Chart from "chart.js/auto";
 import { Bubble } from "react-chartjs-2";
 
 //setup block
@@ -38,8 +39,103 @@ const data = {
           r: 15,
         },
       ],
-      backgroundColor: ["rgb(230, 255, 255,0.8)"],
+      backgroundColor: ["rgb(230, 255, 255,0.9)"],
       borderColor: ["blue"],
+      borderWidth: 1,
+      clip: { left: false, top: false, right: false, bottom: false },
+    },
+    {
+      label: "Angry",
+      data: [
+        {
+          x: 14,
+          y: 90,
+          r: 20,
+        },
+        {
+          x: 10,
+          y: 62,
+          r: 12,
+        },
+      ],
+      backgroundColor: ["	rgb(255, 229, 229,0.8)"],
+      borderColor: ["red"],
+      borderWidth: 1,
+      clip: { left: false, top: false, right: false, bottom: false },
+    },
+    {
+      label: "Neutral",
+      data: [
+        {
+          x: 1.5,
+          y: 90,
+          r: 20,
+        },
+        {
+          x: 10,
+          y: 62,
+          r: 12,
+        },
+      ],
+      backgroundColor: ["	rgb(255, 255, 255,0.8)"],
+      borderColor: ["grey"],
+      borderWidth: 1,
+      clip: { left: false, top: false, right: false, bottom: false },
+    },
+    {
+      label: "Surprise",
+      data: [
+        {
+          x: 14,
+          y: 60,
+          r: 14,
+        },
+        {
+          x: 10,
+          y: 62,
+          r: 12,
+        },
+      ],
+      backgroundColor: ["	rgb(255, 229, 249,0.8)"],
+      borderColor: ["pink"],
+      borderWidth: 1,
+      clip: { left: false, top: false, right: false, bottom: false },
+    },
+    {
+      label: "Fear",
+      data: [
+        {
+          x: 1.5,
+          y: 90,
+          r: 20,
+        },
+        {
+          x: 10,
+          y: 62,
+          r: 12,
+        },
+      ],
+      backgroundColor: ["	rgb(229, 229, 255,0.8)"],
+      borderColor: ["purple"],
+      borderWidth: 1,
+      clip: { left: false, top: false, right: false, bottom: false },
+    },
+    {
+      label: "Disgust",
+      data: [
+        {
+          x: 1.5,
+          y: 90,
+          r: 20,
+        },
+        {
+          x: 10,
+          y: 62,
+          r: 12,
+        },
+      ],
+      backgroundColor: ["	rgb(229, 255, 236,0.8)"],
+      borderColor: ["lime"],
       borderWidth: 1,
       clip: { left: false, top: false, right: false, bottom: false },
     },
@@ -49,9 +145,11 @@ const data = {
 const options = {
   legend: {
     labels: {
-      fontColor: "pink",
+      // This more specific font property overrides the global property
+      fontColor: "yellow",
     },
   },
+
   layout: {
     padding: { right: 20 },
   },
@@ -73,6 +171,7 @@ const options = {
     y: {
       title: {
         display: true,
+
         text: "% of emotion",
       },
       min: 10,
@@ -86,7 +185,6 @@ const options = {
 const renderChart = () => (
   <>
     <div className="chartContainer">
-      <canvas id="myChart"></canvas>
       <Bubble data={data} options={options} />
     </div>
   </>

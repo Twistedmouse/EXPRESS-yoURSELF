@@ -90,7 +90,7 @@ function Facemesh() {
             window.location.assign("/Chart");
           }}
         >
-          ->
+          {"->"}
         </button>
       </div>
     </div>
